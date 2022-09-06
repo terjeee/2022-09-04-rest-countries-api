@@ -1,0 +1,30 @@
+@use "./variables.scss" as var;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.6;
+
+  // Responsive font-size: ;
+  font-size: min(max(1rem, 4vw), 20px);
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+
+  img {
+    display: block;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
