@@ -7,12 +7,14 @@ function NavBar() {
 
   return (
     <header>
-      <nav className={css.navbar}>
-        <h3>Countries</h3>
-        <button className={css.btn__theme} onClick={handleChangeTheme}>
-          Light/Dark
-        </button>
-      </nav>
+      <div className={css.container}>
+        <nav className={css.navbar}>
+          <h3>Countries</h3>
+          <button className={css.btn__theme} onClick={handleChangeTheme}>
+            Light/Dark
+          </button>
+        </nav>
+      </div>
     </header>
   );
 }

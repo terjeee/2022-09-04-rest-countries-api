@@ -4,14 +4,19 @@ header {
   padding: 1rem var.$padding-body;
   box-shadow: var.$box-shadow;
 
-  .navbar {
-    top: 0;
-    position: sticky;
-    display: flex;
-    justify-content: space-between;
+  .container {
+    max-width: var.$page-width;
+    margin: auto;
 
-    h3 {
-      font-weight: var.$weight-m;
+    .navbar {
+      top: 0;
+      position: sticky;
+      display: flex;
+      justify-content: space-between;
+
+      h3 {
+        font-weight: var.$weight-m;
+      }
     }
   }
 }
