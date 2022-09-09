@@ -1,8 +1,6 @@
 import css from "./Country.module.scss";
 
 function Country(props) {
-  console.log(props);
-
   return (
     <article className={css.country}>
       <img src={props.flag} alt="flag" />
