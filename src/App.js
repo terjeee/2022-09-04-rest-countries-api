@@ -1,5 +1,5 @@
 import NavBar from "./components/NavBar/NavBar";
-import Countries from "./components/Countries/Countries";
+import Countries from "./routes/Countries/Countries";
 
 function App() {
   return (
