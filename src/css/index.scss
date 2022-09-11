@@ -10,7 +10,17 @@ html {
   line-height: 1.6;
 
   // Responsive font-size: ;
-  font-size: min(max(1rem, 4vw), 20px);
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
 }
 
 body {
@@ -26,5 +36,36 @@ body {
 
   a {
     text-decoration: none;
+  }
+}
+
+// THEME
+.light {
+  body {
+    background-color: var.$clr-light-bg;
+    color: var.$clr-light-text;
+
+    .element {
+      background-color: var.$clr-light-element;
+    }
+
+    input {
+      color: var.$clr-light-input;
+    }
+  }
+}
+
+.dark {
+  body {
+    background-color: var.$clr-light-bg;
+    color: var.$clr-light-text;
+
+    .element {
+      background-color: var.$clr-light-element;
+    }
+
+    input {
+      color: var.$clr-light-input;
+    }
   }
 }
