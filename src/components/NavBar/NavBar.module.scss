@@ -21,10 +21,7 @@ header {
 
       .btn__theme {
         display: flex;
-        justify-content: center;
         align-items: center;
-        gap: 2.5px;
-        background: none;
         border: none;
 
         &:hover {
@@ -32,7 +29,8 @@ header {
         }
 
         svg {
-          font-size: 25px;
+          margin-bottom: -2px;
+          font-size: 27.5px;
         }
       }
     }

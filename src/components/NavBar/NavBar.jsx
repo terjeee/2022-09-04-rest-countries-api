@@ -20,7 +20,6 @@ function NavBar() {
           <h3>Countries</h3>
           <button className={css.btn__theme} onClick={handleChangeTheme} id="theme__el">
             {ctxTheme.theme === "light" ? <MdOutlineNightlightRound /> : <WiDaySunny />}
-            {ctxTheme.theme === "light" ? "Dark Mode" : "Light Mode"}
           </button>
         </nav>
       </div>

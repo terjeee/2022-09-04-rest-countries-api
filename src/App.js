@@ -7,10 +7,8 @@ import Countries from "./routes/Countries/Countries";
 function App() {
   const ctxTheme = useContext(themeContext);
 
-  console.log(ctxTheme.theme);
-
   return (
-    <div id={ctxTheme.theme}>
+    <div className="app" id={ctxTheme.theme}>
       <NavBar />
       <main>
         <Countries />
