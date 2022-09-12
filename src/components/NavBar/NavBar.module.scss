@@ -1,7 +1,9 @@
 @use "../../css/variables" as var;
 
 header {
-  padding: 1rem var.$padding-body;
+  top: 0;
+  position: sticky;
+  padding: 15px var.$padding-body;
   box-shadow: var.$box-shadow;
 
   .container {
@@ -9,13 +11,29 @@ header {
     margin: auto;
 
     .navbar {
-      top: 0;
-      position: sticky;
       display: flex;
       justify-content: space-between;
+      margin-bottom: -2.5px;
 
       h3 {
         font-weight: var.$weight-m;
+      }
+
+      .btn__theme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5px;
+        background: none;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        svg {
+          font-size: 25px;
+        }
       }
     }
   }

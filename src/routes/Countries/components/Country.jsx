@@ -2,7 +2,7 @@ import css from "./Country.module.scss";
 
 function Country(props) {
   return (
-    <article className={css.country}>
+    <article className={css.country} id="theme__el">
       <img src={props.flag} alt="flag" />
       <div className={css.text}>
         <h3>{props.name}</h3>
