@@ -10,7 +10,7 @@ html {
   line-height: 1.6;
 
   // Responsive font-size: ;
-  font-size: 16px;
+  font-size: 14px;
 }
 @media screen and (min-width: 320px) {
   html {
@@ -19,11 +19,12 @@ html {
 }
 @media screen and (min-width: 1000px) {
   html {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
 body {
+  min-height: 100vh;
   font-family: "Nunito Sans", sans-serif;
 
   img {
@@ -40,32 +41,32 @@ body {
 }
 
 // THEME
-.light {
-  body {
-    background-color: var.$clr-light-bg;
+#light {
+  background-color: var.$clr-light-bg;
+  color: var.$clr-light-text;
+
+  #theme__el {
+    background-color: var.$clr-light-element;
     color: var.$clr-light-text;
+  }
 
-    .element {
-      background-color: var.$clr-light-element;
-    }
-
-    input {
-      color: var.$clr-light-input;
-    }
+  #theme__input {
+    color: var.$clr-light-input;
+    color: var.$clr-light-text;
   }
 }
 
-.dark {
-  body {
-    background-color: var.$clr-light-bg;
-    color: var.$clr-light-text;
+#dark {
+  background-color: var.$clr-dark-bg;
+  color: var.$clr-dark-text;
 
-    .element {
-      background-color: var.$clr-light-element;
-    }
+  #theme__el {
+    background-color: var.$clr-dark-element;
+    color: var.$clr-dark-text;
+  }
 
-    input {
-      color: var.$clr-light-input;
-    }
+  #theme__input {
+    background-color: var.$clr-dark-element;
+    color: var.$clr-dark-input;
   }
 }

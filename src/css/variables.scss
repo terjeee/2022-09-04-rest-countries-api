@@ -1,6 +1,6 @@
 // readability
 $page-width: 1200px;
-$padding-body: 1rem;
+$padding-body: 20px;
 
 // typography
 $weight-s: 300;
@@ -19,5 +19,6 @@ $clr-dark-element: hsl(209, 23%, 22%);
 $clr-dark-input: hsl(0, 0%, 52%);
 
 // annet
-$border-radius: 0.5rem;
-$box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; ;
+$border-radius: 0.25rem;
+$box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+// $box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
