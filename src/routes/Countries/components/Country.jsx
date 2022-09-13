@@ -1,8 +1,17 @@
+import { useNavigate } from "react-router-dom";
+
 import css from "./Country.module.scss";
 
 function Country(props) {
+  const navigateRR = useNavigate();
+
+  const handleNavigate = () => {
+    const country = props.cca3;
+    navigateRR(`/country/${country}`);
+  };
+
   return (
-    <article className={css.country} id="theme__el">
+    <article className={css.country} id="theme__el" onClick={handleNavigate}>
       <img src={props.flag} alt="flag" />
       <div className={css.text}>
         <h3>{props.name}</h3>
