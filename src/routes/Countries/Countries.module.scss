@@ -12,6 +12,7 @@
     .filter {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 1rem;
 
       form {
@@ -35,6 +36,7 @@
 
         input {
           flex-shrink: 1;
+          font-size: 15px;
           border: none;
           vertical-align: middle;
           border-radius: var.$border-radius;
@@ -45,42 +47,33 @@
         }
       }
 
-      .div__select {
-        width: 40%;
-        padding-right: 10px;
-        box-shadow: var.$box-shadow;
+      // select {
+      //   width: 40%;
+      //   padding: 10px 20px;
+      //   border: none;
+      //   box-shadow: var.$box-shadow;
 
-        &:hover {
-          cursor: pointer;
-        }
+      //   &:hover {
+      //     cursor: pointer;
+      //   }
 
-        select {
-          width: 100%;
-          height: 100%;
-          padding: 10px 20px;
-          border: none;
-
-          &:hover {
-            cursor: pointer;
-          }
-
-          &:focus {
-            outline-style: none;
-          }
-          option {
-            border: none;
-          }
-        }
-      }
+      //   &:focus {
+      //     outline-style: none;
+      //   }
+      //   option {
+      //     border: none;
+      //   }
+      // }
     }
+  }
 
-    .list {
-      padding: 2rem 0 0 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-      align-items: center;
-      gap: 2rem;
-    }
+  .list {
+    padding: 2rem 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(minimum-size, 1fr));
+    align-items: center;
+    gap: 2rem;
   }
 }
 

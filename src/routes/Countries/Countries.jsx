@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 // import InfiniteScroll from "react-infinite-scroll-component";
 
 import { BiSearchAlt2 } from "react-icons/bi";
+import SelectMenu from "../../components/NavBar/UI/SelectMenu";
 import Country from "./components/Country";
 
 import css from "./Countries.module.scss";
@@ -33,7 +34,7 @@ function Countries() {
   };
 
   const handleFilterRegion = (event) => {
-    setFilterRegion(event.target.value.toLowerCase());
+    setFilterRegion(event.value);
   };
 
   // apply filter to filteredCountries
@@ -63,16 +64,27 @@ function Countries() {
               id="theme__el"
             />
           </form>
-          <div className={css.div__select} id="theme__el">
-            <select onChange={handleFilterRegion} name="filter-select" id="theme__el">
-              <option value="">All Continents</option>
-              <option value="Africa">Africa</option>
-              <option value="Americas">Americas</option>
-              <option value="Asia">Asia</option>
-              <option value="Europe">Europe</option>
-              <option value="Oceania">Oceania</option>
-            </select>
-          </div>
+          <SelectMenu
+            onChange={handleFilterRegion}
+            placeholder="Filter by Region"
+            isSearchable={false}
+            options={[
+              { value: "", label: "All" },
+              { value: "africa", label: "Africa" },
+              { value: "americas", label: "Americas" },
+              { value: "asia", label: "Asia" },
+              { value: "europe", label: "Europe" },
+              { value: "oceania", label: "Oceania" },
+            ]}
+          />
+          {/* <select onChange={handleFilterRegion} name="filter-select" id="theme__el">
+            <option value="">All Continents</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select> */}
         </div>
         <div className={css.list}>
           {/* <InfiniteScroll
@@ -90,6 +102,7 @@ function Countries() {
             <Country
               key={index}
               name={country.name.common}
+              cca3={country.cca3}
               flag={country.flags.svg}
               population={country.population}
               capital={country.capital}
