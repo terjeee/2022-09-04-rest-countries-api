@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import themeContext from "../../../context/themeContext";
+import themeContext from "../../context/themeContext";
 
 import Select from "react-select";
 
