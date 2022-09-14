@@ -1,0 +1,10 @@
+@use "../../css/variables.scss" as var;
+
+.btn {
+  padding: 10px 30px;
+  // margin: 5px 10px 5px 0;
+  box-shadow: var.$box-shadow;
+  border-radius: var.$border-radius;
+  border: none;
+  cursor: pointer;
+}
