@@ -1,0 +1,63 @@
+@use "../../css/variables.scss" as var;
+@use "../../css/breakpoints.scss";
+
+.container {
+  margin: auto;
+  padding: var.$padding-body;
+  max-width: var.$page-width;
+
+  .details {
+    img {
+      width: 100%;
+      max-height: 325px;
+      margin: 25px 0;
+      border-radius: var.$border-radius;
+      box-shadow: var.$box-shadow;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      span {
+        font-weight: var.$weight-m;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        p {
+          font-weight: var.$weight-s;
+        }
+      }
+    }
+
+    button {
+      margin: 7.5px 10px 7.5px 0;
+    }
+  }
+}
+
+@include breakpoints.tablet {
+  .container {
+    .details {
+      .info {
+        .text {
+          display: flex;
+          flex-direction: row;
+          // justify-content: space;
+          gap: 40px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoints.desktop {
+  .details {
+    display: flex;
+  }
+}
