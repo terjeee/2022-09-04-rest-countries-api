@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 // import InfiniteScroll from "react-infinite-scroll-component";
 
 import { BiSearchAlt2 } from "react-icons/bi";
-import SelectMenu from "../../components/NavBar/UI/SelectMenu";
+import SelectMenu from "../../components/UI/SelectMenu";
 import Country from "./components/Country";
 
 import css from "./Countries.module.scss";
