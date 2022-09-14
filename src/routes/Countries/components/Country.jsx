@@ -6,7 +6,7 @@ function Country(props) {
   const navigateRR = useNavigate();
 
   const handleNavigate = () => {
-    const country = props.cca3;
+    const country = props.cca3.toLowerCase();
     navigateRR(`/country/${country}`);
   };
 
