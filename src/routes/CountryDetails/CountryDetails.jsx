@@ -61,7 +61,7 @@ export default function CountryDetails() {
                 </div>
                 <div>
                   <p>
-                    <span>Top Level Domain: </span>
+                    <span>Top-Level Domain: </span>
                     {country.tld.map((tld, index) => (index ? " " : "") + tld)}
                   </p>
                   <p>
