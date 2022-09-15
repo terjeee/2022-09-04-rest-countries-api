@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useContext } from "react";
 import themeContext from "./context/themeContext";
 
@@ -10,17 +10,17 @@ function App() {
   const ctxTheme = useContext(themeContext);
 
   return (
-    <div className="app" id={ctxTheme.theme}>
-      <NavBar />
-      <main>
-        <BrowserRouter>
+    <BrowserRouter>
+      <div className="app" id={ctxTheme.theme}>
+        <NavBar />
+        <main>
           <Routes>
             <Route path="/" element={<Countries />} />
             <Route path="/country/:countryId" element={<CountryDetails />} />
           </Routes>
-        </BrowserRouter>
-      </main>
-    </div>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 

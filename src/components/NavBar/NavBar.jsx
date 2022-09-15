@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import themeContext from "../../context/themeContext";
 
@@ -17,7 +18,7 @@ function NavBar() {
     <header id="theme__el">
       <div className={css.container}>
         <nav className={css.navbar}>
-          <h3>Countries</h3>
+          <Link to="/">Countries</Link>
           <button className={css.btn__theme} onClick={handleChangeTheme} id="theme__el">
             {ctxTheme.theme === "light" ? <MdOutlineNightlightRound /> : <WiDaySunny />}
           </button>
