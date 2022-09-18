@@ -66,10 +66,10 @@ function Countries() {
           </form>
           <SelectMenu
             onChange={handleFilterRegion}
+            isSearchable="false"
             placeholder="Filter by Region"
-            isSearchable={false}
             options={[
-              { value: "", label: "All" },
+              { value: "", label: "No Filter" },
               { value: "africa", label: "Africa" },
               { value: "americas", label: "Americas" },
               { value: "asia", label: "Asia" },

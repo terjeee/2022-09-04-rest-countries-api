@@ -8,10 +8,7 @@ export default function CountryDetails() {
   const { countryId: id } = useParams();
   const navigateRR = useNavigate();
   const [country, setCountry] = useState(null);
-  console.log(country);
-  if (country) {
-    console.log(country.tld);
-  }
+  console.log(country?.borders);
 
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/alpha/${id}`)
@@ -83,11 +80,12 @@ export default function CountryDetails() {
                 <p>
                   <span>Border Countries:</span>
                 </p>
-                {country.borders.map((el, index) => (
-                  <Link to={`/country/${el.toLowerCase()}`} key={index}>
-                    <Button>{el}</Button>
-                  </Link>
-                ))}
+                {country?.borders &&
+                  country.borders.map((el, index) => (
+                    <Link to={`/country/${el.toLowerCase()}`} key={index}>
+                      <Button>{el}</Button>
+                    </Link>
+                  ))}
               </div>
             </article>
           </div>
