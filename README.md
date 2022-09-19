@@ -1,4 +1,3 @@
-<<<<<<< HEAD
-=======
+Live Server: https://terjeee.github.io/2022-09-04-rest-countries-api/
 
->>>>>>> d731fbefaade879e334e1add19315961c3fcaa53
+Reference: https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca
