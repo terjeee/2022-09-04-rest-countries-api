@@ -9,9 +9,3 @@
     @content;
   }
 }
-
-@mixin function($width) {
-  @media screen and (min-width: $width) {
-    @content;
-  }
-}
