@@ -7,7 +7,7 @@ function Country(props) {
 
   const handleNavigate = () => {
     const country = props.cca3.toLowerCase();
-    navigateRR(`/country/${country}`);
+    navigateRR(`/2022-09-04-rest-countries-api/country/${country}`);
   };
 
   return (
