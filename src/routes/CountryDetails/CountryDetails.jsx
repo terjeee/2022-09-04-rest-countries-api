@@ -25,7 +25,7 @@ export default function CountryDetails() {
   };
 
   return (
-    <section>
+    <section className={css.country__details}>
       <div className={css.container}>
         <Button onClick={handleNavigateHome}>Back</Button>
         {country && (
@@ -82,7 +82,10 @@ export default function CountryDetails() {
                 </p>
                 {country?.borders &&
                   country.borders.map((el, index) => (
-                    <Link to={`/country/${el.toLowerCase()}`} key={index}>
+                    <Link
+                      to={`/2022-09-04-rest-countries-api/country/${el.toLowerCase()}`}
+                      key={index}
+                    >
                       <Button>{el}</Button>
                     </Link>
                   ))}

@@ -1,57 +1,60 @@
 @use "../../css/variables.scss" as var;
 @use "../../css/breakpoints.scss";
 
-.container {
-  margin: auto;
+.country__details {
   padding: var.$padding-body;
-  max-width: var.$page-width;
 
-  .details {
-    img {
-      width: 100%;
-      max-height: 325px;
-      margin: 25px 0;
-      border-radius: var.$border-radius;
-      box-shadow: var.$box-shadow;
-    }
+  .container {
+    margin: auto;
+    max-width: var.$page-width;
 
-    .info {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-
-      span {
-        font-weight: var.$weight-m;
+    .details {
+      img {
+        width: 100%;
+        max-height: 325px;
+        margin: 25px 0;
+        border-radius: var.$border-radius;
+        box-shadow: var.$box-shadow;
       }
 
-      .text {
+      .info {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
 
-        p {
-          font-weight: var.$weight-s;
+        span {
+          font-weight: var.$weight-m;
+        }
+
+        .text {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          p {
+            font-weight: var.$weight-s;
+          }
         }
       }
-    }
 
-    button {
-      margin: 7.5px 10px 7.5px 0;
+      button {
+        margin: 7.5px 10px 7.5px 0;
+      }
     }
   }
 }
 
 @include breakpoints.tablet {
-  .container {
-    .details {
-      .info {
-        .text {
-          flex-direction: row;
-          justify-content: space-between;
-          gap: 0;
-
-          > div {
-            width: 50%;
+  .country__details {
+    .container {
+      .details {
+        img {
+          max-width: 60%;
+        }
+        .info {
+          .text {
+            flex-direction: row;
+            gap: 50px;
           }
         }
       }
@@ -60,29 +63,30 @@
 }
 
 @include breakpoints.desktop {
-  .container {
-    padding: 0 0;
-
-    button {
-      margin: 40px 0;
-    }
-
-    .details {
-      display: flex;
-      flex-direction: row;
-
-      img {
-        margin: 0;
-        width: 50%;
+  .country__details {
+    .container {
+      button {
+        display: inline-block;
+        margin: var.$padding-body 0;
       }
-      .info {
-        padding: 0 0 0 40px;
-        justify-content: space-between;
 
-        .text {
-          display: flex;
+      .details {
+        display: flex;
+        flex-direction: row;
+
+        img {
+          margin: 0;
+          width: 50%;
+        }
+        .info {
+          padding: 0 0 0 40px;
           justify-content: space-between;
-          gap: 20px;
+
+          .text {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+          }
         }
       }
     }
