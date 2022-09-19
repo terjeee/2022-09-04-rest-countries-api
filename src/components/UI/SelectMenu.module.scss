@@ -1,0 +1,16 @@
+@use "../../css/variables.scss" as var;
+@use "../../css/breakpoints.scss";
+
+.select__container {
+  width: 40%;
+  margin: 0 auto 0 0;
+  font-size: 14px;
+  box-shadow: var.$box-shadow;
+}
+
+@include breakpoints.tablet {
+  .select__container {
+    width: auto;
+    margin: 0;
+  }
+}
