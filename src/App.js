@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useContext } from "react";
 import themeContext from "./context/themeContext";
 
@@ -15,8 +15,12 @@ function App() {
         <NavBar />
         <main>
           <Routes>
-            <Route path="/" element={<Countries />} />
-            <Route path="/country/:countryId" element={<CountryDetails />} />
+            <Route path="/2022-09-04-rest-countries-api/" element={<Countries />} />
+            <Route
+              path="/2022-09-04-rest-countries-api/country/:countryId"
+              element={<CountryDetails />}
+            />
+            <Route path="*" element={<Navigate to="/2022-09-04-rest-countries-api/" />} />
           </Routes>
         </main>
       </div>
