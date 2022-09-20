@@ -11,7 +11,7 @@ function Country(props) {
   };
 
   return (
-    <article className={css.country} id="theme__el" onClick={handleNavigate}>
+    <article className={`${css.country} "theme__el"`} onClick={handleNavigate}>
       <img src={props.flag} alt="flag" />
       <div className={css.text}>
         <h3>{props.name}</h3>

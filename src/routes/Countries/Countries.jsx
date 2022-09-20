@@ -52,16 +52,15 @@ function Countries() {
     <section className={css.countries}>
       <div className={css.container}>
         <div className={css.filter}>
-          <form id="theme__el">
-            <button className={css.button} id="theme__el" disabled>
+          <form className="theme__el">
+            <button className={`${css.button} theme__input`} disabled>
               <BiSearchAlt2 />
             </button>
             <input
-              className={css.input}
+              className={`${css.input} theme__input`}
               onChange={handleFilterInput}
               type="text"
               placeholder="Search"
-              id="theme__el"
             />
           </form>
           <SelectMenu

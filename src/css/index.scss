@@ -49,14 +49,14 @@ body {
   background-color: var.$clr-light-bg;
   color: var.$clr-light-text;
 
-  #theme__el {
+  .theme__el {
     background-color: var.$clr-light-element;
     color: var.$clr-light-text;
-  }
 
-  #theme__input {
-    background-color: var.$clr-light-element;
-    color: var.$clr-light-input;
+    .theme__input {
+      background-color: var.$clr-light-element;
+      color: var.$clr-light-input;
+    }
   }
 }
 
@@ -64,13 +64,13 @@ body {
   background-color: var.$clr-dark-bg;
   color: var.$clr-dark-text;
 
-  #theme__el {
+  .theme__el {
     background-color: var.$clr-dark-element;
     color: var.$clr-dark-text;
-  }
 
-  #theme__input {
-    background-color: var.$clr-dark-element;
-    color: var.$clr-dark-input;
+    .theme__input {
+      background-color: var.$clr-dark-element;
+      color: var.$clr-dark-input;
+    }
   }
 }

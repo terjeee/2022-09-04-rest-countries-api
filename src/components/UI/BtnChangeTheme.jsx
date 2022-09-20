@@ -30,7 +30,7 @@ export default function BtnChangeTheme() {
   };
 
   return (
-    <button className={css.btn__theme} onClick={handleChangeTheme} id="theme__el">
+    <button className={`${css.btn__theme} theme__el`} onClick={handleChangeTheme}>
       {ctxTheme.theme === "light" ? <MdOutlineNightlightRound /> : <WiDaySunny />}
     </button>
   );
