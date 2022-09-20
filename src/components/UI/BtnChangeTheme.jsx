@@ -8,6 +8,7 @@ import css from "./BtnChangeTheme.module.scss";
 
 export default function BtnChangeTheme() {
   const ctxTheme = useContext(themeContext);
+  console.log(localStorage.theme);
 
   useEffect(() => {
     const localTheme = localStorage.getItem("theme");
