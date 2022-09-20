@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import themeContext from "../../context/themeContext";
 
 import { MdOutlineNightlightRound } from "react-icons/md";
@@ -9,8 +9,22 @@ import css from "./BtnChangeTheme.module.scss";
 export default function BtnChangeTheme() {
   const ctxTheme = useContext(themeContext);
 
-  const handleChangeTheme = () => {
+  useEffect(() => {
+    const localTheme = localStorage.getItem("theme");
+    const appTheme = ctxTheme.theme;
+
+    if (localTheme === appTheme) return;
+
     ctxTheme.toggleTheme();
+  }, []); // eslint-disable-line
+
+  const handleChangeTheme = () => {
+    const localTheme = localStorage.getItem("theme");
+
+    ctxTheme.toggleTheme();
+
+    if (localTheme === "light") localStorage.setItem("theme", "dark");
+    if (localTheme === "dark") localStorage.setItem("theme", "light");
   };
 
   return (
