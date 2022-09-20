@@ -33,3 +33,18 @@
     }
   }
 }
+
+@include breakpoints.tablet {
+  .country {
+    img {
+      // min-height: 250px;
+      // max-height: 600px;
+    }
+  }
+}
+
+@include breakpoints.desktop {
+  .country {
+    max-width: 400px;
+  }
+}
