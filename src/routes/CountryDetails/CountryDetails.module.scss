@@ -20,7 +20,7 @@
       .info {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
 
         span {
           font-weight: var.$weight-m;
@@ -38,7 +38,7 @@
       }
 
       button {
-        margin: 7.5px 10px 7.5px 0;
+        margin: 7.5px;
       }
     }
   }
