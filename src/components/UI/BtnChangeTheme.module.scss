@@ -1,0 +1,14 @@
+.btn__theme {
+  display: flex;
+  align-items: center;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    margin-bottom: -2px;
+    font-size: 25px;
+  }
+}
