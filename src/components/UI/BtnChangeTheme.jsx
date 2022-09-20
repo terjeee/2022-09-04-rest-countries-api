@@ -8,13 +8,12 @@ import css from "./BtnChangeTheme.module.scss";
 
 export default function BtnChangeTheme() {
   const ctxTheme = useContext(themeContext);
-  console.log(localStorage);
 
   useEffect(() => {
     const localTheme = localStorage.getItem("theme");
     const appTheme = ctxTheme.theme;
 
-    if (!localTheme) return;
+    if (!localTheme) return localStorage.setItem("theme", "light");
     if (localTheme === appTheme) return;
 
     ctxTheme.toggleTheme();
@@ -23,13 +22,11 @@ export default function BtnChangeTheme() {
   const handleChangeTheme = () => {
     const localTheme = localStorage.getItem("theme");
 
-    ctxTheme.toggleTheme();
-
-    if (!localTheme) return localStorage.setItem("theme", "light");
-
     localTheme === "light"
       ? localStorage.setItem("theme", "dark")
       : localStorage.setItem("theme", "light");
+
+    ctxTheme.toggleTheme();
   };
 
   return (
