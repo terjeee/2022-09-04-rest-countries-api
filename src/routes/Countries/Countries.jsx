@@ -53,7 +53,11 @@ function Countries() {
       <div className={css.container}>
         <div className={css.filter}>
           <form className="theme__el">
-            <button className={`${css.button} theme__input`} disabled>
+            <button
+              className={`${css.button} theme__input`}
+              aria-label="search-disabled"
+              disabled
+            >
               <BiSearchAlt2 />
             </button>
             <input

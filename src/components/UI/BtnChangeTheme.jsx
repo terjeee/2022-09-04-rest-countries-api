@@ -30,7 +30,11 @@ export default function BtnChangeTheme() {
   };
 
   return (
-    <button className={`${css.btn__theme} theme__el`} onClick={handleChangeTheme}>
+    <button
+      className={`${css.btn__theme} theme__el`}
+      onClick={handleChangeTheme}
+      aria-label="change-theme"
+    >
       {ctxTheme.theme === "light" ? <MdOutlineNightlightRound /> : <WiDaySunny />}
     </button>
   );
