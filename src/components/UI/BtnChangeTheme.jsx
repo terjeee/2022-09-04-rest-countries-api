@@ -13,6 +13,7 @@ export default function BtnChangeTheme() {
     const localTheme = localStorage.getItem("theme");
     const appTheme = ctxTheme.theme;
 
+    if (!localTheme) return;
     if (localTheme === appTheme) return;
 
     ctxTheme.toggleTheme();
