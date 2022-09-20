@@ -5,7 +5,7 @@ import css from "./NavBar.module.scss";
 
 function NavBar() {
   return (
-    <header id="theme__el">
+    <header className="theme__el">
       <div className={css.container}>
         <nav className={css.navbar}>
           <Link to="/">Countries</Link>
