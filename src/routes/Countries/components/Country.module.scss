@@ -36,15 +36,12 @@
 
 @include breakpoints.tablet {
   .country {
-    img {
-      // min-height: 250px;
-      // max-height: 600px;
-    }
+    max-width: 430px;
   }
 }
 
 @include breakpoints.desktop {
   .country {
-    max-width: 400px;
+    max-width: 313px;
   }
 }
