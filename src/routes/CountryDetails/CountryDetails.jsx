@@ -34,47 +34,47 @@ export default function CountryDetails() {
             <article className={css.info}>
               <h2>{country.name.common}</h2>
               <div className={css.text}>
-                <div>
-                  <p>
+                <ul>
+                  <li>
                     <span>Native Name: </span>
                     {Object.values(country.name.nativeName)[0].common}
-                  </p>
-                  <p>
+                  </li>
+                  <li>
                     <span>Population: </span>
                     {country.population.toLocaleString()}
-                  </p>
-                  <p>
+                  </li>
+                  <li>
                     <span>Region: </span>
                     {country.region}
-                  </p>
-                  <p>
+                  </li>
+                  <li>
                     <span>Sub Region: </span>
                     {country.subregion}
-                  </p>
-                  <p>
+                  </li>
+                  <li>
                     <span>Capital: </span>
                     {country.capital}
-                  </p>
-                </div>
-                <div>
-                  <p>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
                     <span>Top-Level Domain: </span>
                     {country.tld.map((tld, index) => (index ? " " : "") + tld)}
-                  </p>
-                  <p>
+                  </li>
+                  <li>
                     <span>Currencies: </span>
                     {Object.values(country.currencies).map(
                       (cur, index) =>
                         (index ? ", " : "") + `${cur.name} (${cur.symbol.toUpperCase()})`
                     )}
-                  </p>
-                  <p>
+                  </li>
+                  <li>
                     <span>Languages: </span>
                     {Object.values(country.languages).map(
                       (lang, index) => (index ? ", " : "") + lang
                     )}
-                  </p>
-                </div>
+                  </li>
+                </ul>
               </div>
               <div>
                 <p>
