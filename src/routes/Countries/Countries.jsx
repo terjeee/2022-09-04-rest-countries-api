@@ -41,8 +41,7 @@ function Countries() {
   useEffect(() => {
     const filteredList = countries.filter(
       (country) =>
-        country.region.toLowerCase().includes(filterRegion) &&
-        country.name.common.toLowerCase().includes(filterInput)
+        country.region.toLowerCase().includes(filterRegion) && country.name.common.toLowerCase().includes(filterInput)
     );
 
     setFilteredCountries(filteredList);
@@ -53,19 +52,10 @@ function Countries() {
       <div className={css.container}>
         <div className={css.filter}>
           <form className="theme__el">
-            <button
-              className={`${css.button} theme__input`}
-              aria-label="search-disabled"
-              disabled
-            >
+            <button className={`${css.button} theme__input`} aria-label="search-disabled" disabled>
               <BiSearchAlt2 />
             </button>
-            <input
-              className={`${css.input} theme__input`}
-              onChange={handleFilterInput}
-              type="text"
-              placeholder="Search"
-            />
+            <input className={`${css.input} theme__input`} onChange={handleFilterInput} type="text" placeholder="Search" />
           </form>
           <SelectMenu
             onChange={handleFilterRegion}
